@@ -9,7 +9,7 @@ create or replace function geohash_encode(longitude in varchar2, -- 经度
   i             number := 1;
   v_len         number := 0;
 begin
-  -- 二进制位交叉合并 偶数位放经度，奇数位放纬度
+  -- 二进制位交叉合并 偶数位放经度，奇数位放纬度，注意位数从0开始，算偶数位
   v_len := length(longitude);
   loop
     lat_split_str := substr(latitude, i, 1);
