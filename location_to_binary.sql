@@ -32,7 +32,7 @@ begin
       bin_str   := bin_str || '0';
       max_value := mid_value;
     end if;
-  
+
     v_precision := v_precision - 1;
   end loop;
   return bin_str;
